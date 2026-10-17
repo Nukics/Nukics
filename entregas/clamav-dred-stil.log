@@ -1,0 +1,14 @@
+/audit/loja.zip: OK
+/amostras/serve.js: OK
+
+----------- SCAN SUMMARY -----------
+Known viruses: 3628164
+Engine version: 1.5.4
+Scanned directories: 0
+Scanned files: 2
+Infected files: 0
+Data scanned: 7.35 MiB
+Data read: 2.87 MiB (ratio 2.56:1)
+Time: 15.889 sec (0 m 15 s)
+Start Date: 2026:10:17 16:12:44
+End Date:   2026:10:17 16:13:00

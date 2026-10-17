@@ -1,6 +1,6 @@
 # Código completo Dred Stil
 
-> **Alerta em investigação:** o Windows bloqueou o ZIP como `Trojan:Script/Ulthar.A!ml`, indicando `serve.js`. Não execute nem restaure o arquivo bloqueado e não desative a proteção. A revisão estática não substitui antivírus; a varredura antivírus ainda não foi concluída. Veja o [resumo para retomada](RETOMAR-DRED-STIL.md).
+> **Alerta em investigação:** o Defender bloqueou o ZIP como `Trojan:Script/Ulthar.A!ml`, indicando `serve.js`. A revisão estática e uma varredura independente com ClamAV não encontraram ameaças; a base do ClamAV é de 11/10/2026. Isso não confirma falso positivo. Mantenha o bloqueio e consulte o [relatório com resultados e próximos passos](RELATORIO-DEFENDER-DRED-STIL.md).
 
 Arquivo: `dred-stil-codigo-completo.zip` — 153 arquivos, 3,012,496 bytes.
 

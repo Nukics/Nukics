@@ -29,9 +29,9 @@ Não executar nem restaurar o arquivo bloqueado, não desativar o antivírus e n
 
 O `serve.js` do pacote final é idêntico, byte a byte, ao do ZIP original enviado. Tem 365 bytes e SHA-256 `d63fc6fd533e6ebec87055f3c5a2d313261d0cf2f6005f76f400429568875180`. Seu conteúdo carrega `.env.local` com o recurso nativo do Node e chama a inicialização de `./server`.
 
-Duas revisões estáticas não encontraram indicadores evidentes de malware, executáveis disfarçados, macros ou ofuscação. Não há antivírus instalado neste ambiente. As tentativas de acessar as fontes oficiais do ClamAV foram bloqueadas pelo proxy com HTTP 403, mesmo após concessão de acesso de rede. Assim, a varredura antivírus não foi concluída e falso positivo não foi confirmado.
+A revisão estática não encontrou indicadores evidentes de malware. Foi possível obter a imagem oficial do ClamAV por Docker e realizar uma varredura independente: ClamAV1.5.4/base28150 de11/10/2026, zero ameaças, sem erros no ZIP e no serve.js separado. O ambiente de análise ficou sem rede e não executou o código da loja. A detecção do Defender não foi confirmada como falsa; não ignorar o bloqueio. Consulte `RELATORIO-DEFENDER-DRED-STIL.md` para os hashes, a saída do scanner e o texto para pedir revisão à Microsoft.
 
-Próximo passo: concluir análise com antivírus e esclarecer o alerta do Defender antes de recomendar a execução do pacote. Pode ser necessária a análise oficial da Microsoft para uma possível detecção indevida. Não renomear, criptografar ou alterar o pacote para escapar do bloqueio.
+Próximo passo: atualizar o Defender, verificar o computador e solicitar revisão da detecção no portal oficial da Microsoft. A submissão ainda não foi realizada: o ambiente não acessou o portal e não possui a conta Microsoft do usuário.
 
 ## Supabase pendente
 
