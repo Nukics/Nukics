@@ -1,5 +1,7 @@
 # Código completo Dred Stil
 
+> **Alerta em investigação:** o Windows bloqueou o ZIP como `Trojan:Script/Ulthar.A!ml`, indicando `serve.js`. Não execute nem restaure o arquivo bloqueado e não desative a proteção. A revisão estática não substitui antivírus; a varredura antivírus ainda não foi concluída. Veja o [resumo para retomada](RETOMAR-DRED-STIL.md).
+
 Arquivo: `dred-stil-codigo-completo.zip` — 153 arquivos, 3,012,496 bytes.
 
 Inclui Destaques com rolagem horizontal, estoque independente por cor, movimentação de categorias, banners, logo, página Atacado e integração Getnet.
