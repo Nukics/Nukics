@@ -1,5 +1,13 @@
 # Retomar o projeto Dred Stil
 
+## Atualização: instalação local assistida
+
+O usuário informou que resolveu o alerta do Windows Defender. A tarefa atual é configurar a loja no computador; ele ainda não criou projeto no Supabase.
+
+Nova entrega: `dred-stil-instalacao-local.zip`. Leia primeiro `PRIMEIROS-PASSOS.md`. Inclui SQL único para projeto novo e comandos `npm run configurar` (cria .env.local local e privado), `npm run verificar` (diagnóstico somente leitura), `npm start` e `npm run demo`. Node >=22, recomendado Node.js 24 LTS. A instalação limpa do ZIP passou em 125 testes; os fluxos de admin, produtos, categorias, estoque e checkout Pix simulado foram revalidados no navegador. Credenciais reais e homologação Getnet continuam pendentes; nenhum Supabase remoto foi criado ou alterado.
+
+O texto abaixo preserva o histórico da entrega anterior e do alerta; o código novo tem outro hash e novas instruções. Não reutilizar as instruções antigas de criação do admin.
+
 Resumo salvo em 17/10/2026 para continuar em outro computador. Este documento resume o trabalho; não é uma exportação integral da conversa e não contém credenciais.
 
 ## Estado do projeto

@@ -1,15 +1,23 @@
-# Código completo Dred Stil
+# Dred Stil: instalar e configurar no computador
 
-> **Alerta em investigação:** o Defender bloqueou o ZIP como `Trojan:Script/Ulthar.A!ml`, indicando `serve.js`. A revisão estática e uma varredura independente com ClamAV não encontraram ameaças; a base do ClamAV é de 11/10/2026. Isso não confirma falso positivo. Mantenha o bloqueio e consulte o [relatório com resultados e próximos passos](RELATORIO-DEFENDER-DRED-STIL.md).
+## Versão atual
 
-Arquivo: `dred-stil-codigo-completo.zip` — 153 arquivos, 3,012,496 bytes.
+[Baixar o projeto completo com instalação assistida](https://github.com/Nukics/Nukics/raw/refs/heads/entrega-dred-stil-2026-10-17/entregas/dred-stil-instalacao-local.zip).
 
-Inclui Destaques com rolagem horizontal, estoque independente por cor, movimentação de categorias, banners, logo, página Atacado e integração Getnet.
+- [Comece aqui: criar Supabase e gerar .env.local](PRIMEIROS-PASSOS.md).
+- [SQL único, somente para projeto Supabase novo](instalar-loja-nova.sql).
+- [Resultado dos 125 testes na cópia limpa extraída do ZIP](testes-instalacao-limpa.log).
 
-Validado localmente com 100 testes automatizados e testes no navegador. Pagamentos reais Getnet ainda dependem das credenciais próprias e da homologação.
+O usuário informou que ainda não criou um projeto Supabase. Nenhum banco real foi criado nem recebeu migrações por esta entrega. Os testes usam banco descartável e pagamentos simulados; pagamentos reais dependem da homologação Getnet.
 
-Antes de usar o novo código na loja, aplique no Supabase as migrações 005 e 006 incluídas no ZIP e cadastre as quantidades reais por cor. O guia está em `docs/ESTOQUE-CORES-CATEGORIAS.md`. Nenhuma migração foi aplicada no banco real por esta entrega.
+Instale Node.js 24 LTS e as dependências com `npm ci`. Depois de criar o projeto e executar o SQL, use `npm run configurar` para informar a URL e a chave secreta do Supabase no próprio computador. O comando cria `.env.local` privado com segredos de sessão aleatórios e não sobrescreve configurações existentes. Não envie a chave ou esse arquivo ao GitHub ou à conversa.
 
-O ZIP contém somente `.env.example`, sem credenciais de ambiente.
+Depois execute `npm run verificar` e `npm start`; abra http://localhost:5173. Para uma demonstração sem banco real, use `npm run demo` e http://localhost:5174.
 
-SHA-256: `b3de70fa7bb2792af9abbb109684106338f7204f36c57a7f2c75c3cf9bec04e3`
+O ZIP mantém todas as mudanças anteriores: banners, logo, rodapé, carregamento, Atacado, Destaques horizontais, estoque independente por cor, categorias movíveis e Getnet incorporada. Corrige também a instalação e a edição de uma cor já vinculada a um estoque, impedindo perda silenciosa do controle de peças.
+
+Pacote atual: 164 arquivos, 3049800 bytes. SHA-256: `7e4fe8749226f8b88626af2758db00b21fbeefe468dc6ba0a8537c847392ff26`.
+
+A varredura independente do pacote atual com ClamAV 1.5.4/base 28150 de 11/10/2026 não detectou ameaças; isso não é garantia de ausência de malware nem uma avaliação do Microsoft Defender. O usuário informou ter resolvido o alerta do Defender antes desta etapa. O [relatório histórico](RELATORIO-DEFENDER-DRED-STIL.md) refere-se à versão anterior e seu hash original; não é uma análise deste pacote novo.
+
+As credenciais reais não são incluídas no ZIP. Antes de vender, confira os contatos, produtos, saldos físicos por cor, envio de e-mails e habilitações Getnet. Esta entrega não publica o site em produção.
