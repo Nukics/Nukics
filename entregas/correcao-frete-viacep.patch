@@ -1,0 +1,11 @@
+--- a/server/index.js
++++ b/server/index.js
+@@ -32,7 +32,7 @@
+   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+   'Content-Security-Policy':
+     "default-src 'self'; img-src 'self' data: https://*.supabase.co; style-src 'self' 'unsafe-inline'; script-src 'self'; " +
+-    "frame-src https://www.google.com; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'",
++    "frame-src https://www.google.com; connect-src 'self' https://viacep.com.br; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'",
+   'Cross-Origin-Opener-Policy': 'same-origin',
+   // Só em produção (HTTPS): o navegador passa a recusar HTTP para o domínio.
+   ...(process.env.NODE_ENV === 'production' ? { 'Strict-Transport-Security': 'max-age=63072000; includeSubDomains' } : {}),
